@@ -3,6 +3,13 @@ Will add a control on T-SQL job steps to ensure the steps only run on a primary 
 
 Will work when using default names for databases. When using several BizTalk Server instances you will need to run the script once for each instance with jobs.
 
+/* Will only run when primary */ <br/>
+IF (sys.fn_hadr_is_primary_replica('master') = 1)<br/>
+BEGIN
+
+**-- Original Code**
+
+END
 
 | Parameter | Comment |
 |-----------|---------|
