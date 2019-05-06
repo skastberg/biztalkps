@@ -1,0 +1,3 @@
+- **BtsSetupHelper.psm1** contains functions to be used from many scripts.
+- **Install-BizTalk.ps1** is a sample installation script.
+- **Features.xml** is a sample file with features section.
