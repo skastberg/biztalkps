@@ -244,7 +244,7 @@ $logFile = "$scriptfolder\$timestamp-config.log"
 $configs = Load-ConfigFile -fullPathToFile $pathToTokensFile -exitOnError
 Create-ConfigurationFile -configurations $configs -pathToKeepassFile $pathToKeepassFile -pathToConfigFile $pathToConfigFile -tempConfigFile $tempConfigFile -timestamp $timestamp
 
-#$result = Configure-BizTalk -destinationConfig $tempConfigFile -installLog $logFile 
+$result = Configure-BizTalk -destinationConfig $tempConfigFile -installLog $logFile 
 
 Log-SetupStep -message "Note that '$tempConfigFile' contains passwords!" -level Warning
 if (Prompt-YesNo -title "Delete Config file?" -message "Do you want to delete '$tempConfigFile'?" -yesText "Yes" -noText "no")
