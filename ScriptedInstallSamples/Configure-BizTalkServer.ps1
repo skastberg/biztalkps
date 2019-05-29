@@ -258,22 +258,3 @@ Set-DTAPurge -configurations $configs
 Set-BackupFolder -configurations $configs
 
 
-
-<#
-
-DECLARE @RC int
-DECLARE @nHours tinyint = 0
-DECLARE @nDays tinyint = 5
-DECLARE @nHardDays tinyint = 15
-DECLARE @dtLastBackup datetime = GETDATE()
-DECLARE @fHardDeleteRunningInstances int = 1
-
-EXECUTE @RC = [dbo].[dtasp_PurgeTrackingDatabase] 
-   @nHours
-  ,@nDays
-  ,@nHardDays
-  ,@dtLastBackup
-  ,@fHardDeleteRunningInstances
-
-#>
-
