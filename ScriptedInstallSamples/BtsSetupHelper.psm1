@@ -70,6 +70,30 @@ function Log-SetupStep ($message, [ValidateSet('Information','Warning','Error')]
 }
 
 
+function Load-ConfigFile($fullPathToFile, [switch]$exitOnError )
+{
+    Log-SetupStep -message "Start Load-ConfigFile $fullPathToFile" -level Information
+    if ((Test-Path -Path $fullPathToFile)-eq $false ) 
+    {
+        if ($exitOnError)
+        {
+            Log-SetupStep -message "Load-ConfigFile '$fullPathToFile' Not found. Quit selected." -level Error
+            Exit    
+        }
+        else
+        {
+            Log-SetupStep -message "Load-ConfigFile '$fullPathToFile' Not found." -level Warning
+            return $null
+        }
+    }
+    else
+    {
+        $configuration = Get-Content $fullPathToFile -Encoding UTF8 | ConvertFrom-Csv -Delimiter ";" 
+        return $configuration
+    }
+        Log-SetupStep -message "End Load-ConfigFile $fullPathToFile" -level Information
+}
+
 
 ################################################################
 # Maincode

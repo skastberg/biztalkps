@@ -1,0 +1,53 @@
+﻿Token;Value;Comment
+BAMAlerts-Database;BAMAlerts;Database Settings
+BAMAlerts-Server;BTS2016VM;Database Settings
+BAMAnalysis-Database;BAMAnalysis;Database Settings
+BAMAnalysis-Server;BTS2016VM;Database Settings
+BAMArchive-Database;BAMArchive;Database Settings
+BAMArchive-Server;BTS2016VM;Database Settings
+BAMPrimaryImport-Database;BAMPrimaryImport;Database Settings
+BAMPrimaryImport-Server;BTS2016VM;Database Settings
+BAMStarSchema-Database;BAMStarSchema;Database Settings
+BAMStarSchema-Server;BTS2016VM;Database Settings
+BizTalkDTADb-Database;BizTalkDTADb;Database Settings
+BizTalkDTADb-Server;BTS2016VM;Database Settings
+BizTalkMgmtDb-Database;BizTalkMgmtDb;Database Settings
+BizTalkMgmtDb-Server;BTS2016VM;Database Settings
+BizTalkMsgBoxDb-Database;BizTalkMsgBoxDb;Database Settings
+BizTalkMsgBoxDb-Server;BTS2016VM;Database Settings
+BizTalkRuleEngineDb-Database;BizTalkRuleEngineDb;Database Settings
+BizTalkRuleEngineDb-Server;BTS2016VM;Database Settings
+SSODB-Database;SSODB;Database Settings
+SSODB-Server;BTS2016VM;Database Settings
+SSOAdminGroup;SSO Administrators;This is the Administrator of the Enterprise Single Sign-On (SSO) system
+SSOAffiliateAdminGroup;SSO Affiliate Administrators;The SSO Affiliate Administrator must be able to create Affiliate Applications.
+BTS_ADMIN_GROUP;BizTalk Server Administrators;The BizTalk Server Administrators Group has the least privileges necessary to perform administrative tasks included in the Configuration Framework Wizard and to administer the BizTalk Server environment after installation.
+BTS_OPERATOR_GROUP;BizTalk Server Operators;The BizTalk Server Operators Group has the least privileges necessary to perform tasks required for operating the BizTalk Server environment after installation
+BTS_B2B_OPERATOR_GROUP;BizTalk B2B Operators Group;The BizTalk Server B2B Operators Group has the least privileges necessary to perform tasks required for operating the BizTalk Server B2B environment after installation.
+BTS_HOST_GROUP;BizTalk Application Users;Windows group for accounts with access to the In-Process BizTalk  hosts (hosts processes in the BizTalk Server).
+BTS_IHOST_GROUP;BizTalk Isolated Host Users;Windows group for accounts with access to the Isolated BizTalk hosts (hosts processes not running on BizTalk Server, such as HTTP and SOAP)
+BAM_PORTAL_USERS;Everyone;BAM Portal Users
+ENTSSO_USER;BTSSVC;Specify the name of the account under which the Single Sign-On (SSO) service should run. This account must be a member of the SSO Administrator(s) group.
+HOST_USER;BTSSVC;Windows account with access to a specific In-Process BizTalk host instance. This account will be given Log on as Service rights.
+ISO_USER;BTSSVC;Windows account with access to a specific Isolated BizTalk  host instance. This account will be given Log on as Service rights.
+BAM_ALERTS_USER;BTSSVC;Windows account that will have permissions to access the data in the BAM Alerts databases during Business Activity searches.
+BAM_NOT_USER;;Windows account that will have permissions to access the data in the BAM Notification Services databases during Business Activity searches.
+BAM_PIMSEARCH_USER;;Windows account that will have permissions to access the data in the BAM Primary Import Database during Business Activity searches.
+BAM_APPPOOL_USER;BTSSVC;Identity of the BAM Application Pool. 
+RULES_USER;BTSSVC;Rules engine service account
+DEP_NOT_USER;SomeUser;Notification for the deployment/ undeployment of policies
+ENTSSO_USER-Pwd;$$BTS2016VM/DEV/BTSSVC;
+HOST_USER-Pwd;$$BTS2016VM/DEV/BTSSVC;
+ISO_USER-Pwd;$$BTS2016VM/DEV/BTSSVC;
+SSO_ID_BACKUP_SECRET_PASSWORD;$$BTS2016VM/DEV/SSOSecret;
+SSO_ID_BACKUP_SECRET_REMINDER;$$BTS2016VM/DEV/SSOSecretReminder;
+BAM_APPPOOL_USER-Pwd;$$BTS2016VM/DEV/BTSSVC;
+BAM_ALERTS_USER-Pwd;$$BTS2016VM/DEV/BTSSVC;
+RULES_USER-Pwd;$$BTS2016VM/DEV/BTSSVC;
+ServerDomain;BTS2016VM;
+SMTP-Server;server.smtp.com;Address to the SMTP server for Alerts
+ALERTS-Share;\\server\alerts$;Share to alerts location
+BAM_PORTAL_SITE;Default Web Site;BAM Portal Web site
+SSO_ID_BACKUP_SECRET_FILE;c:\install\@TimeStamp@-SSO-Secret.Bak;
+BACKUP_FOLDER;\\BTS2016VM\Backups$;Where we store backups
+

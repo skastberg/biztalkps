@@ -1,5 +1,5 @@
 #Requires -RunAsAdministrator
-Import-Module .\BtsSetupHelper.psm1 -Global -DisableNameChecking
+
 
 ################################################################
 
@@ -164,10 +164,16 @@ function Install-CU ($mediaLib,$logFullname)
 # Maincode
 ################################################################ 
 
+$scriptfolder = [System.IO.Path]::GetDirectoryName( $MyInvocation.InvocationName)
+
+Set-Location $scriptfolder
+Import-Module "$scriptfolder\BtsSetupHelper.psm1" -Global -DisableNameChecking
+
 Check-64Bit
-$scriptfolder = Get-ScriptDirectory
+
 $timestamp = [System.DateTime]::Now.ToString("yyyyMMdd_HHmmss")
 $btsMedia = "C:\BizTalkMedia"
+
 
 
 Install-BizTalk -mediaLib $btsMedia   -logFullname "$scriptfolder\Install-BizTalk_$timestamp.log"
