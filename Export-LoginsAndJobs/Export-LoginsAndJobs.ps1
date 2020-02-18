@@ -9,7 +9,7 @@
 # The contributors give no express warranties, guarantees or conditions.
 # Test it in safe environment and change it to fit your requirements.
 #
-Write-Host "Export-LoginsAndJobs.ps1 v1.0.0"
+
 
 
 function Query-SQLServer($sqlText, $database = "master", $server = ".")
@@ -121,7 +121,7 @@ function Save-LoginScript ($ServerInstance, [Bool]$IncludeLocalUsers = $false)
             $loginsSql += "`r`n$($login.script( $so ))`r`nGO";    
         } 
     }
-    $loginsSql | Out-File "$($instance)_logins.sql" -Encoding unicode
+    $loginsSql | Out-File "$($instance)_logins_$($script:scriptTime).sql" -Encoding unicode
 
 }
 
@@ -167,7 +167,7 @@ function Save-JobsScript ($ServerInstance)
     
     }
 
-    $jobsSql | Out-File "$($instance)_Jobs.sql" -Encoding unicode
+    $jobsSql | Out-File "$($instance)_Jobs_$($script:scriptTime).sql" -Encoding unicode
     
 }
 
@@ -186,8 +186,13 @@ if ([System.String]::IsNullOrWhiteSpace( $destinationFolder))
 
 ###################################
 Set-Location $destinationFolder
+$script:scriptTime = [System.DateTime]::Now.ToString("yyyy-MM-dd HHmmss")
 
-Clear-Host
+if ($host.Name -eq "Windows PowerShell ISE Host" -or $host.Name -eq "ConsoleHost" )
+{
+    Clear-Host
+    Write-Host "Export-LoginsAndJobs.ps1 v1.0.1 - Timestamp $($script:scriptTime)"
+}
 
 
 
