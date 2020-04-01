@@ -1,0 +1,60 @@
+﻿Token;Value;Comment
+BAMAlerts-Database;BAMAlerts;Database Settings
+BAMAlerts-Server;BTSDEV;Database Settings
+BAMAnalysis-Database;BAMAnalysis;Database Settings
+BAMAnalysis-Server;BTSDEV;Database Settings
+BAMArchive-Database;BAMArchive;Database Settings
+BAMArchive-Server;BTSDEV;Database Settings
+BAMPrimaryImport-Database;BAMPrimaryImport;Database Settings
+BAMPrimaryImport-Server;BTSDEV;Database Settings
+BAMStarSchema-Database;BAMStarSchema;Database Settings
+BAMStarSchema-Server;BTSDEV;Database Settings
+BizTalkDTADb-Database;BizTalkDTADb;Database Settings
+BizTalkDTADb-Server;BTSDEV;Database Settings
+BizTalkMgmtDb-Database;BizTalkMgmtDb;Database Settings
+BizTalkMgmtDb-Server;BTSDEV;Database Settings
+BizTalkMsgBoxDb-Database;BizTalkMsgBoxDb;Database Settings
+BizTalkMsgBoxDb-Server;BTSDEV;Database Settings
+BizTalkRuleEngineDb-Database;BizTalkRuleEngineDb;Database Settings
+BizTalkRuleEngineDb-Server;BTSDEV;Database Settings
+SSODB-Database;SSODB;Database Settings
+SSODB-Server;BTSDEV;Database Settings
+SSOAdminGroup;SSO Administrators;This is the Administrator of the Enterprise Single Sign-On (SSO) system
+SSOAffiliateAdminGroup;SSO Affiliate Administrators;The SSO Affiliate Administrator must be able to create Affiliate Applications.
+BTS_ADMIN_GROUP;BizTalk Server Administrators;The BizTalk Server Administrators Group has the least privileges necessary to perform administrative tasks included in the Configuration Framework Wizard and to administer the BizTalk Server environment after installation.
+BTS_OPERATOR_GROUP;BizTalk Server Operators;The BizTalk Server Operators Group has the least privileges necessary to perform tasks required for operating the BizTalk Server environment after installation
+BTS_B2B_OPERATOR_GROUP;BizTalk B2B Operators Group;The BizTalk Server B2B Operators Group has the least privileges necessary to perform tasks required for operating the BizTalk Server B2B environment after installation.
+BTS_HOST_GROUP;BizTalk Application Users;Windows group for accounts with access to the In-Process BizTalk  hosts (hosts processes in the BizTalk Server).
+BTS_IHOST_GROUP;BizTalk Isolated Host Users;Windows group for accounts with access to the Isolated BizTalk hosts (hosts processes not running on BizTalk Server, such as HTTP and SOAP)
+BAM_PORTAL_USERS;Everyone;BAM Portal Users
+ENTSSO_USER;BTSSVC;Specify the name of the account under which the Single Sign-On (SSO) service should run. This account must be a member of the SSO Administrator(s) group.
+HOST_USER;BTSSVC;Windows account with access to a specific In-Process BizTalk host instance. This account will be given Log on as Service rights.
+ISO_USER;BTSSVC;Windows account with access to a specific Isolated BizTalk  host instance. This account will be given Log on as Service rights.
+BAM_ALERTS_USER;BTSSVC;Windows account that will have permissions to access the data in the BAM Alerts databases during Business Activity searches.
+BAM_NOT_USER;;Windows account that will have permissions to access the data in the BAM Notification Services databases during Business Activity searches.
+BAM_PIMSEARCH_USER;;Windows account that will have permissions to access the data in the BAM Primary Import Database during Business Activity searches.
+BAM_APPPOOL_USER;BTSSVC;Identity of the BAM Application Pool. 
+RULES_USER;BTSSVC;Rules engine service account
+DEP_NOT_USER;SomeUser;Notification for the deployment/ undeployment of policies
+ENTSSO_USER-Pwd;$$BizTalkVault/DEV/BTSSVC;
+HOST_USER-Pwd;$$BizTalkVault/DEV/BTSSVC;
+ISO_USER-Pwd;$$BizTalkVault/DEV/BTSSVC;
+SSO_ID_BACKUP_SECRET_PASSWORD;$$BizTalkVault/DEV/SSOSecret;
+SSO_ID_BACKUP_SECRET_REMINDER;$$BizTalkVault/DEV/SSOSecretReminder;
+BAM_APPPOOL_USER-Pwd;$$BizTalkVault/DEV/BTSSVC;
+BAM_ALERTS_USER-Pwd;$$BizTalkVault/DEV/BTSSVC;
+RULES_USER-Pwd;$$BizTalkVault/DEV/BTSSVC;
+ServerDomain;BTSDEV;
+SMTP-Server;server.smtp.com;Address to the SMTP server for Alerts
+ALERTS-Share;\\server\alerts$;Share to alerts location
+BAM_PORTAL_SITE;Default Web Site;BAM Portal Web site
+SSO_ID_BACKUP_SECRET_FILE;E:\Scripts\@TimeStamp@-SSO-Secret.Bak;
+BACKUP_FOLDER;\\BTSDEV\Backups$;Where we store backups
+SSIS-Server;BTSDEV;Server where we create the SSIS Catalog
+SSIS-CatalogPass;$$BizTalkVault/DEV/BTSSVC;Password for the SSIS catalog
+RestApi-Mgmt-User;BTSSVC;BizTalk Server REST APIs for management and operational data
+RestApi-Mgmt-Pwd;$$BizTalkVault/DEV/BTSSVC;BizTalk Server REST APIs for management and operational data Password
+RestApi-ODS-User;BTSSVC;BizTalk Server REST APIs for management and operational data
+RestApi-ODS-Pwd;$$BizTalkVault/DEV/BTSSVC;BizTalk Server REST APIs for management and operational data Password
+TMS-User;BTSSVC;BizTalk TMS Service User
+TMS-Pwd;$$BizTalkVault/DEV/BTSSVC;BizTalk TMS Service User Password
