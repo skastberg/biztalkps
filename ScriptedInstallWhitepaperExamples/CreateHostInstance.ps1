@@ -32,12 +32,12 @@ function Create-BizTalkHostInstance(
         }
         if ($isGmsaAccount)
         {
-            $instance.Install( $cred.UserName , $null, $preventFromStarting, $true) 
+            $instance.Install( $cred.UserName , "", $true, $true) 
         }
         else
         {
             $pass 
-            $instance.Install( $cred.UserName , $cred.GetNetworkCredential().password, $preventFromStarting, $false) 
+            $instance.Install( $cred.UserName , $cred.GetNetworkCredential().password, $true, $false) 
         }
         
 		Write-Host "HostInstance $hostName was mapped and installed successfully. Mapping created between Host: $hostName and Server: $serverName);" -Fore Green
