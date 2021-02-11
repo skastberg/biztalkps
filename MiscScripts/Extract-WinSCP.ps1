@@ -62,7 +62,15 @@ function Install-WinSCP {
             }
             if($winscpRedirectFound -eq $false){
                 $da =  "<dependentAssembly><assemblyIdentity name=`"WinSCPnet`" publicKeyToken=`"2271ec4a3c56d0bf`" culture=`"neutral`" /><bindingRedirect oldVersion=`"0.0.0.0-$fv`" newVersion=`"$fv`" /></dependentAssembly>"
-                $doc.configuration.runtime.assemblyBinding.InnerXml += $da
+                if ($doc.configuration.runtime.assemblyBinding -is [Array])
+                {
+                    $doc.configuration.runtime.assemblyBinding[0].InnerXml += $da
+                }
+                else
+                {
+                    $doc.configuration.runtime.assemblyBinding.InnerXml += $da
+                }
+                
             }
             $doc.Save($item.FullName)
 
